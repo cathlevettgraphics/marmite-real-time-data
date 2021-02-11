@@ -1,0 +1,246 @@
+body {
+  font-family: "Press Start 2P", cursive;
+  color: #222;
+}
+
+:root {
+  --sky-blue-crayola: hsla(190, 82%, 72%, 1);
+  --sky-blue-crayola-hover: rgb(9, 201, 240);
+  --celeste: hsla(173, 81%, 83%, 1);
+  --mint-cream: hsla(173, 33%, 95%, 1);
+  --piggy-pink: hsla(342, 67%, 90%, 1);
+  --cotton-candy: hsla(330, 70%, 83%, 1);
+  --cotton-candy-hover: rgb(241, 146, 194);
+
+  /* CSS HSL */
+  --prussian-blue: hsla(201, 100%, 14%, 1);
+  --maximum-red: hsla(0, 69%, 50%, 1);
+  --orange: hsla(31, 100%, 48%, 1);
+  --maximum-yellow-red: hsla(40, 97%, 64%, 1);
+  --lemon-meringue: hsla(51, 55%, 82%, 1);
+}
+
+/* chart styles */
+
+.marmite-chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#marmite-chart {
+  /* background-color: var(--mint-cream); */
+  width: 355px;
+  height: 350px;
+  margin-block-end: 30px;
+  opacity: 1;
+}
+
+@media (min-width: 761px) {
+  #marmite-chart {
+    /* background-color: var(--mint-cream); */
+    width: 620px;
+    height: 350px;
+    margin-block-end: 30px;
+  }
+}
+
+svg.nvd3-svg {
+  height: 100%;
+  width: 100%;
+}
+
+.nvd3 text {
+  font-size: 1.3rem;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Press Start 2P", cursive;
+}
+
+g.nv-legendWrap.nvd3-svg {
+  display: none;
+}
+
+.nv-x.nv-axis.nvd3-svg line {
+  stroke-opacity: 0;
+}
+.nv-y.nv-axis.nvd3-svg line {
+  stroke-opacity: 0;
+}
+
+.nv-groups .nv-series-0 g:first-child {
+  fill: var(--orange);
+  stroke: none;
+  opacity: 1;
+}
+
+.nv-groups .nv-series-0 g:last-child {
+  fill: var(--maximum-red);
+  stroke: none;
+  opacity: 1;
+}
+
+g.nv-bar.positive text {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.8rem;
+}
+
+/* page styles */
+
+.page-header-wrapper {
+  max-inline-size: 355px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-block-end: 20px;
+}
+
+@media (min-width: 761px) {
+  .page-header-wrapper {
+    max-inline-size: 1000px;
+  }
+}
+
+.page-header-love {
+  color: var(--orange);
+}
+
+.page-header-hate {
+  color: var(--maximum-red);
+}
+
+.page-nav.top {
+  padding: 20px;
+  background-color: var(--lemon-meringue);
+  width: 100vw;
+  margin-block-end: 30px;
+}
+
+@media (min-width: 761px) {
+  .page-nav.top {
+    padding: 15px;
+  }
+}
+
+.page-title {
+  font-size: 3.5rem;
+  max-inline-size: 620px;
+  line-height: 1.6;
+}
+
+@media (min-width: 761px) {
+  .page-title {
+    font-size: 4rem;
+    max-inline-size: 620px;
+    line-height: 1.5;
+  }
+}
+
+.page-strapline {
+  font-size: 1.3rem;
+  max-inline-size: 720px;
+  line-height: 1.8;
+}
+
+@media (min-width: 761px) {
+  .page-strapline {
+    font-size: 1.5rem;
+    max-inline-size: 720px;
+    line-height: 1.7;
+  }
+}
+
+.vote-now-text {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.controls {
+  width: 355px;
+  margin-block-end: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 761px) {
+  .controls {
+    width: 620px;
+    margin-block-end: 30px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.btn {
+  padding: 15px 20px;
+  width: 200px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn:last-child {
+  margin-left: 10px;
+}
+
+.btn.btn-love-it {
+  background-color: var(--orange);
+}
+
+.btn.btn-hate-it {
+  background-color: var(--maximum-red);
+}
+
+.btn.btn-love-it:hover {
+  background-color: var(--prussian-blue);
+}
+
+.btn.btn-hate-it:hover {
+  background-color: var(--prussian-blue);
+}
+
+.btn.btn-love-it:active,
+.btn.btn-hate-it:active {
+  transform: scale(0.98);
+}
+
+.page-nav.bottom {
+  background-color: var(--lemon-meringue);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100vw;
+  margin-block-end: 40px;
+}
+
+@media (min-width: 761px) {
+  .page-nav.bottom {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+  }
+}
+
+.logo-text {
+  font-size: 1rem;
+  margin-block-start: 10px;
+}
+
+@media (min-width: 761px) {
+  .logo-text {
+    margin-block-start: 0px;
+    font-size: 1rem;
+  }
+}

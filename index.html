@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>marmite – love it or hate it?</title>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/novus/nvd3/v1.8.1/build/nv.d3.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- normalise -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+    crossorigin="anonymous" />
+  <!-- generics -->
+  <link rel="stylesheet" href="./styles/generic.css">
+  <!-- Mystyle -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <!-- fonts -->
+  <link rel="stylesheet" href="./fonts/fonts.css">
+
+  <!-- d3 -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.5/nv.d3.min.js"></script>
+
+  <!-- Firebase -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script defer src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script defer src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+  <script defer src="./scripts/app.js"></script>
+</head>
+
+<body>
+
+  <header class="page-header">
+
+    <nav class="page-nav top">
+      <a href="/">marmite</a>
+    </nav>
+
+    <div class="page-header-wrapper">
+      <h1 class="page-title">Marmite – <span class="page-header-love">love</span> it or <span
+          class="page-header-hate">hate</span>
+        it?</h1>
+      <p class="page-strapline">Which side are you on? Vote in our real time live poll to answer one of the
+        most divisive questions of our age!</p>
+    </div>
+
+  </header>
+
+  <main>
+    <div class="marmite-chart-wrapper">
+      <div id="marmite-chart">
+        <svg></svg>
+      </div>
+
+      <p class="vote-now-text">vote now!</p>
+
+      <div id="controls" class="controls">
+        <button class="btn btn-love-it" id="love-it">love it</button>
+        <button class="btn btn-hate-it" id="hate-it">hate it</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <nav class="page-nav bottom">
+      <a href="/">marmite</a>
+      <a href="https://cathlevett-graphics.netlify.app/" class="logo-text">© 2021 cath levett graphics</a>
+    </nav>
+  </footer>
+</body>
+
+</html>
